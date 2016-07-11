@@ -1,5 +1,4 @@
----
-title: EasyLingo
+# EasyLingo
 ---
 
 Why
