@@ -1,5 +1,6 @@
 # EasyLingo
 ---
+> Check the pdf in documents for latest documentation including some screenshots.
 
 Why
 ===
