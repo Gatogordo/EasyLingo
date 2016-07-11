@@ -1,9 +1,8 @@
 # EasyLingo
----
+
 > Check the pdf in documents for latest documentation including some screenshots.
 
-Why
-===
+## Why
 
 This language expansion module was designed to simplify content editing
 when using a large amount of languages in your Sitecore environments.
@@ -20,13 +19,11 @@ Sitecore comprises of both those with one or more versions as well as
 those that have no version available or are irrelevant for that
 context/site.
 
-What
-====
+## What
 
 This module consists of 2 parts, which can be activated separately.
 
-Extra languages section in the content editor
----------------------------------------------
+### Extra languages section in the content editor
 
 The bar consists of 3 language lists:
 
@@ -82,8 +79,7 @@ The language should match the used language exactly (so “fr-BE” ≠ “fr”
 and can be completely different or overlap. For the second part of the
 module it is important though to put the “default” language first.
 
-Second part: request resolver
------------------------------
+### Second part: request resolver
 
 The second part of the module consists of a request resolver that is put
 in the httpRequestBegin pipeline after the LanguageResolver.
@@ -95,16 +91,14 @@ current language is not part of the ‘allowedLanguages’ set we will
 redirect the user to homepage in the default language (default is the
 first language in the set).
 
-How to enable/disable
----------------------
+## How to enable/disable
 
 There is one configuration file: EasyLingo.config located in
 “/include/zEasyLingo”. You will find the request resolver and content
 editor section in here. By default both are enabled. To disable, just
 comment out the configuration you don’t want.
 
-Installation
-============
+## Installation
 
 #### Install
 
@@ -125,16 +119,9 @@ No files should be overwritten during the installation process.
 -   Include the “allowedLanguages” elements to your sites definitions if
     needed
 
-Future features
-===============
+### Future features
 
 The EasyLingo bar is now only available in the Content Editor. The next
 step would be to introduce a language bar in Sitecore’s Experience
 Editor that allows users to quickly switch between the available and
 allowed languages for the content they are editing.
-
-Contact
-=======
-
-Did you find a problem, do you have valuable information to share or do
-you simply want to ask a question, do not hesitate to drop us a line.
