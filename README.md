@@ -19,9 +19,13 @@ Sitecore comprises of both those with one or more versions as well as
 those that have no version available or are irrelevant for that
 context/site.
 
+## Sitecore
+
+The module is tested with Sitecore 8.1. It will probably work in other versions...
+
 ## What
 
-This module consists of 2 parts, which can be activated separately.
+This module consists of 2 parts, which can be activated separately. 
 
 ### Extra languages section in the content editor
 
