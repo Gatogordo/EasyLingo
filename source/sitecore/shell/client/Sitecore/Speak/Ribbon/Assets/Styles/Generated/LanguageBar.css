@@ -1,0 +1,48 @@
+.sc-languagebar
+{
+  background: #e6e6e6;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f7f7f7), color-stop(1, #ebebeb));
+  background: -ms-linear-gradient(bottom, #f7f7f7, #ebebeb);
+  background: -moz-linear-gradient(center bottom, #f7f7f7 0%, #ebebeb 100%);
+  background: -o-linear-gradient(#ebebeb, #f7f7f7);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebebeb', endColorstr='#f7f7f7', GradientType=0);
+  padding: 0.25em 1em;
+}
+
+#languagebarMenuSubcontrol_context_menu nav.sc-languagebar{
+  height: auto;
+}
+
+
+
+.sc-languagebar .sc-languagebar-item
+{
+	//float: left;
+	display: inline-block;
+	padding: .2em .5em .5em 0;
+	text-decoration: none;
+	
+}
+  
+.sc-languagebar .sc-languagebar-title
+{
+	//float: left;
+	display: inline-block;
+	padding: .2em .5em .5em 0;
+	text-decoration: none;
+}
+
+
+.sc-languagebar-section {
+	display: inline-block;
+}
+
+.sc-languagebar  .sc-languagebar-items {
+	max-width: 200px;
+	margin-right: 20px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: bottom;
+	}
+	
+.sc-languagebar .italic {font-style: italic}

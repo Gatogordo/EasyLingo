@@ -1,4 +1,5 @@
-﻿using Sitecore.Globalization;
+﻿using Sitecore.Data;
+using Sitecore.Globalization;
 
 namespace TheReference.DotNet.Sitecore.EasyLingo
 {
@@ -11,8 +12,15 @@ namespace TheReference.DotNet.Sitecore.EasyLingo
 
     public class LanguageVersion
     {
-        public Language Language { get; set; }
-
         public VersionStatus Status { get; set; }
+
+        public string Name { get; set; }
+
+        public bool HasOrigin { get { return !ID.IsNullOrEmpty(Origin); } }
+
+        public ID Origin { get; set; }
+
+        public string Icon { get; set; }
+
     }
 }
