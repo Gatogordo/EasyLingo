@@ -28,21 +28,36 @@ The module is tested with Sitecore 8.1. It will probably work in other versions.
 This module consists of 2 parts, which can be activated separately. 
 
 ### Extra languages section in the content editor
+![](https://github.com/Gatogordo/EasyLingo/blob/Experience-Editor/images/easylingo-ce-1.jpg?raw=true)
 
-The bar consists of 3 language lists:
+![](https://github.com/Gatogordo/EasyLingo/blob/Experience-Editor/images/easylingo-ce-2.jpg?raw=true)
 
-On the first line, two of the lists are displayed. On the left hand
-side, the first list shows all the languages that have an actual version
-available. The right side shows the second list with all the languages
-for which a fallback version exists (Working through Sitecore’s item
-fallback available as of version 8.1). The versions with fallback on the
-right are rendered in italic.
+### Extra language bar in the Experience editor
+The bar can be toggled on or off:
 
-The current language on the Sitecore context is visualized in bold.
+![](https://github.com/Gatogordo/EasyLingo/blob/Experience-Editor/images/easylingo-ee-1.png?raw=true)
 
-The second line hold the third list that shows languages which are
-available on this node/site, but for which no version exists. This line
-will disappear if there are no such languages.
+Once the bar is toggled on:
+
+![](https://github.com/Gatogordo/EasyLingo/blob/Experience-Editor/images/easylingo-ee-2.png?raw=true)
+
+###Section meaning
+
+The component consists of 4 language lists that are visualized slightly different across the two presentations:
+####Versioned languages
+
+The first list shows all the languages that have an actual version available. This is a subset of the languages that are allowed within Sitecore as configured in the System node and/or the “allowedLanguages” setting on the site definition.
+
+####Fallback language versions
+The second list contains all the languages for which a fallback version exists (Working through Sitecore’s item fallback available as of version 8.1). The versions with fallback on are rendered in italic. 
+
+####Languages without a version
+This third list holds the languages that are available on this node/site, but for which no version exists. This line will not be rendered if there are no such languages. 
+
+####Other available languages
+This fourth and final list holds those language versions that are not covered in the ‘allowed languages’ or System node. This could be rogue langue versions that are a remainder of a previous setup or languages created by admin users who are free to create any type of language version.
+In these lists, the current language on the Sitecore context is visualized in bold.
+
 
 Languages in all the lists are clickable
 so the editor can easily switch languages without having to go through
@@ -125,7 +140,6 @@ No files should be overwritten during the installation process.
 
 ### Future features
 
-The EasyLingo bar is now only available in the Content Editor. The next
-step would be to introduce a language bar in Sitecore’s Experience
-Editor that allows users to quickly switch between the available and
-allowed languages for the content they are editing.
+There are no specific future features on our tasklist anymore.
+If you have specific functional requirements that you would like to see realized through this module, drop us a line or contact us on Twitter, Community, Slack and we will be glad to listen in on your thoughts and observations!
+
