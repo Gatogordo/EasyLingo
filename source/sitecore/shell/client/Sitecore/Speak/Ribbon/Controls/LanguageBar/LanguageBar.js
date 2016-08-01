@@ -12,8 +12,7 @@ function (Sitecore, RibbonPageCode, ExperienceEditor) {
         attributes: [
         ],
 
-        allowedLanguageVersions: [],
-        disallowedLanguageVersions: [],
+        languageVersions: [],
 
         initialize: function () {
             document.languageBarContext = this;
@@ -32,8 +31,7 @@ function (Sitecore, RibbonPageCode, ExperienceEditor) {
             }
 
             //Retrieve language versions
-            this.requestAllowedLanguageVersions(itemId, this);
-            this.requestDisallowedLanguageVersions(itemId, this);
+            this.requestLanguageVersions(itemId, this);
 
             //Build HTML
             var htmlSource = "<div class=\"sc-languagebar\">";
@@ -43,7 +41,7 @@ function (Sitecore, RibbonPageCode, ExperienceEditor) {
 
             //Available versions
             htmlSource += "<div class=\"sc-languagebar-title\">Version/<span class=\"italic\">Fallback</span>:</div>";
-            var versioned = this.allowedLanguageVersions.filter(function (x) { return x.Status == 0; });
+            var versioned = this.languageVersions.filter(function (x) { return x.Status == 0; });
             htmlSource += "<div class=\"sc-languagebar-items\">";
             for (var i = 0; i < versioned.length; i++) {
                 htmlSource += this.generateLanguageVersionHtml(versioned[i]);
@@ -51,7 +49,7 @@ function (Sitecore, RibbonPageCode, ExperienceEditor) {
             htmlSource += "</div>";
 
             //Fallback versions
-            var fallbacks = this.allowedLanguageVersions.filter(function (x) { return x.Status == 1; });
+            var fallbacks = this.languageVersions.filter(function (x) { return x.Status == 1; });
             if (fallbacks.length > 0) {
                 htmlSource += "<div class=\"margin\">&nbsp;</div>";
                 htmlSource += "<div class=\"sc-languagebar-items italic\">";
@@ -63,7 +61,7 @@ function (Sitecore, RibbonPageCode, ExperienceEditor) {
             htmlSource += "</div>";
 
             //No versions
-            var unversioned = this.allowedLanguageVersions.filter(function (x) { return x.Status == 2; });
+            var unversioned = this.languageVersions.filter(function (x) { return x.Status == 2; });
             if (unversioned.length > 0) {
                 htmlSource += "<div class=\"sc-languagebar-section\">";
                 htmlSource += "<div class=\"sc-languagebar-title\">No version:</div>";
@@ -78,7 +76,7 @@ function (Sitecore, RibbonPageCode, ExperienceEditor) {
             //DISALLOWED LANGUAGES
             htmlSource += "<div class=\"sc-languagebar-section\">";
             //Available versions
-            var disallowedversions = this.disallowedLanguageVersions.filter(function (x) { return x.Status == 0; });
+            var disallowedversions = this.languageVersions.filter(function (x) { return x.Status == 3; });
             if (disallowedversions.length > 0) {
                 htmlSource += "<div class=\"sc-languagebar-title\">Other available languages:</div>";
                 htmlSource += "<div class=\"sc-languagebar-items\">";
@@ -96,20 +94,11 @@ function (Sitecore, RibbonPageCode, ExperienceEditor) {
         },
 
         //Request and retrieve the languageVersions
-        requestAllowedLanguageVersions: function (itemId, appContext) {
+        requestLanguageVersions: function (itemId, appContext) {
             var context = ExperienceEditor.generateDefaultContext();
             context.currentContext.itemId = itemId;
-            ExperienceEditor.PipelinesUtil.generateRequestProcessor("EasyLingo.LanguageBar.GetAllowedLanguageVersions", function (response) {
+            ExperienceEditor.PipelinesUtil.generateRequestProcessor("EasyLingo.LanguageBar.GetLanguageVersions", function (response) {
                 appContext.allowedLanguageVersions = response.responseValue.value;
-            }).execute(context);
-        },
-
-        //Request and retrieve the languageVersions
-        requestDisallowedLanguageVersions: function (itemId, appContext) {
-            var context = ExperienceEditor.generateDefaultContext();
-            context.currentContext.itemId = itemId;
-            ExperienceEditor.PipelinesUtil.generateRequestProcessor("EasyLingo.LanguageBar.GetDisallowedLanguageVersions", function (response) {
-                appContext.disallowedLanguageVersions = response.responseValue.value;
             }).execute(context);
         },
 

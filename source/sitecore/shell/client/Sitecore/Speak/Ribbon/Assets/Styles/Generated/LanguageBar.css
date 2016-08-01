@@ -19,7 +19,7 @@
 	display: inline-block;
 	padding: .2em .5em .5em 0;
 	text-decoration: none;
-	
+    color: black
 }
   
 .sc-languagebar .sc-languagebar-title
@@ -44,4 +44,10 @@
 	
 .sc-languagebar .italic {
     font-style: italic
+}
+
+.sc-languagebar .margin {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
 }

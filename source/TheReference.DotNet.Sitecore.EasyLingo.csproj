@@ -75,8 +75,7 @@
     <Compile Include="LanguageVersion.cs" />
     <Compile Include="LanguageVersionsSection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Speak\GetDisallowedLanguageVersions.cs" />
-    <Compile Include="Speak\GetAllowedLanguageVersions.cs" />
+    <Compile Include="Speak\GetLanguageVersions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Config\Include\zEasyLingo\EasyLingo.config">
