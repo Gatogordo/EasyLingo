@@ -38,7 +38,6 @@ function (Sitecore, RibbonPageCode, ExperienceEditor) {
             //Build HTML
             var htmlSource = "<div class=\"sc-languagebar\">";
 
-
             //ALLOWED LANGUAGES
             htmlSource += "<div class=\"sc-languagebar-section\">";
 

@@ -13,8 +13,6 @@
   height: auto;
 }
 
-
-
 .sc-languagebar .sc-languagebar-item
 {
 	//float: left;
@@ -32,7 +30,6 @@
 	text-decoration: none;
 }
 
-
 .sc-languagebar-section {
 	display: inline-block;
 }
@@ -45,4 +42,6 @@
 	vertical-align: bottom;
 	}
 	
-.sc-languagebar .italic {font-style: italic}
+.sc-languagebar .italic {
+    font-style: italic
+}

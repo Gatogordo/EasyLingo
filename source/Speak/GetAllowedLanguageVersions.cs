@@ -2,7 +2,6 @@
 using Sitecore.ExperienceEditor.Speak.Server.Requests;
 using Sitecore.ExperienceEditor.Speak.Server.Responses;
 using Sitecore.Globalization;
-using System.Collections.Generic;
 
 namespace TheReference.DotNet.Sitecore.EasyLingo.Speak
 {
@@ -10,16 +9,18 @@ namespace TheReference.DotNet.Sitecore.EasyLingo.Speak
     {
         public override PipelineProcessorResponseValue ProcessRequest()
         {
-            if (this.RequestContext.Item == null)
-                return new PipelineProcessorResponseValue()
-                {
-                    AbortMessage = Translate.Text("The target item could not be found.")
-                };
-            
-            IEnumerable<LanguageVersion> languageVersions = LanguageContainer.GetAllowedLanguageVersions(this.RequestContext.Item);
-            return new PipelineProcessorResponseValue()
+            if (RequestContext.Item == null)
             {
-                Value = (object)languageVersions
+                return new PipelineProcessorResponseValue
+                           {
+                               AbortMessage = Translate.Text("The target item could not be found.")
+                           };
+            }
+
+            var languageVersions = LanguageContainer.GetLanguageVersions(RequestContext.Item);
+            return new PipelineProcessorResponseValue
+            {
+                Value = languageVersions
             };
         }
     }

@@ -34,13 +34,11 @@ namespace TheReference.DotNet.Sitecore.EasyLingo
             }
 
             CurrentLanguage = CurrentItem.Language.Name;
-            var languageVersions = LanguageContainer.GetAllowedLanguageVersions(CurrentItem);
+            var languageVersions = LanguageContainer.GetLanguageVersions(CurrentItem);
             editorFormatter.RenderSectionBegin(parentControl, SectionName, SectionName, SectionName, IconPath, false, true);
             RenderLanguageVersions(languageVersions, editorFormatter, parentControl);
             editorFormatter.RenderSectionEnd(parentControl, true, false);
         }
-
-       
 
         private void RenderLanguageVersions(IEnumerable<LanguageVersion> languageVersions, EditorFormatter editorFormatter, Control parentControl)
         {
@@ -83,17 +81,26 @@ namespace TheReference.DotNet.Sitecore.EasyLingo
                     }
                 }
 
+                var otherVersions = languages.Where(l => l.Status == VersionStatus.Extra).ToList();
+                if (otherVersions.Any())
+                {
+                    editorFormatter.AddLiteralControl(parentControl, "</td></tr><tr><td style=\"padding-bottom:10px\"><span style=\"margin:0px 27px 0px 5px;display:inline-block;\">Other available languages:&nbsp;</span></td><td style=\"padding-bottom:10px\">");
+                    foreach (var languageVersion in otherVersions)
+                    {
+                        var htmlChunk = GetLanguageControl(languageVersion, string.Empty);
+                        if (!string.IsNullOrEmpty(htmlChunk))
+                        {
+                            editorFormatter.AddLiteralControl(parentControl, htmlChunk);
+                        }
+                    }
+                }
+
                 editorFormatter.AddLiteralControl(parentControl, "</td></tr></table>");
             }
         }
 
         private string GetLanguageControl(LanguageVersion languageVersion, string style)
         {
-            if (!languageVersion.HasOrigin)
-            {
-                return null;
-            }
-
             if (languageVersion.Name.Equals(CurrentLanguage, StringComparison.OrdinalIgnoreCase))
             {
                 style += "font-weight:bold";
@@ -106,8 +113,5 @@ namespace TheReference.DotNet.Sitecore.EasyLingo
 
             return htmlChunk;
         }
-
-
-
     }
 }

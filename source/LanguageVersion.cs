@@ -1,11 +1,10 @@
-﻿using Sitecore.Data;
-
-namespace TheReference.DotNet.Sitecore.EasyLingo
+﻿namespace TheReference.DotNet.Sitecore.EasyLingo
 {
     public enum VersionStatus
     {
         Exists,
         IsFallback,
+        Extra,
         None
     }
 
@@ -15,11 +14,6 @@ namespace TheReference.DotNet.Sitecore.EasyLingo
 
         public string Name { get; set; }
 
-        public bool HasOrigin => !ID.IsNullOrEmpty(Origin);
-
-        public ID Origin { get; set; }
-
         public string Icon { get; set; }
-
     }
 }

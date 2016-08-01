@@ -1,7 +1,7 @@
-﻿using Sitecore.Diagnostics;
-using Sitecore.Mvc.Presentation;
-using System.Web;
+﻿using System.Web;
+using Sitecore.Diagnostics;
 using Sitecore.Mvc;
+using Sitecore.Mvc.Presentation;
 using TheReference.DotNet.Sitecore.EasyLingo.Speak;
 
 namespace TheReference.DotNet.Sitecore.EasyLingo
@@ -10,8 +10,8 @@ namespace TheReference.DotNet.Sitecore.EasyLingo
     {
         public static HtmlString LanguageBar(this Controls controls, Rendering rendering)
         {
-            Assert.ArgumentNotNull((object)controls, "controls");
-            Assert.ArgumentNotNull((object)rendering, "rendering");
+            Assert.ArgumentNotNull(controls, "controls");
+            Assert.ArgumentNotNull(rendering, "rendering");
             return new HtmlString(new LanguageBar(controls.GetParametersResolver(rendering)).Render());
         }
     }
