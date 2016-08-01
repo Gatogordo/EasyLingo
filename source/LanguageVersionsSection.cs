@@ -2,15 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.UI;
-using Sitecore.Data;
 using Sitecore.Data.Items;
-using Sitecore.Data.Managers;
 using Sitecore.Diagnostics;
-using Sitecore.Globalization;
 using Sitecore.SecurityModel;
 using Sitecore.Shell.Applications.ContentEditor;
 using Sitecore.Shell.Applications.ContentEditor.Pipelines.RenderContentEditor;
-using Sitecore.Web;
 
 namespace TheReference.DotNet.Sitecore.EasyLingo
 {

@@ -1,5 +1,4 @@
 ﻿using Sitecore.Data;
-using Sitecore.Globalization;
 
 namespace TheReference.DotNet.Sitecore.EasyLingo
 {
@@ -16,7 +15,7 @@ namespace TheReference.DotNet.Sitecore.EasyLingo
 
         public string Name { get; set; }
 
-        public bool HasOrigin { get { return !ID.IsNullOrEmpty(Origin); } }
+        public bool HasOrigin => !ID.IsNullOrEmpty(Origin);
 
         public ID Origin { get; set; }
 

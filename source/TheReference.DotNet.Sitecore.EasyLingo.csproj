@@ -44,23 +44,23 @@
       <HintPath>bin\Sitecore.Client.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ExperienceEditor">
-      <HintPath>bin\Sitecore.ExperienceEditor.dll</HintPath>
+      <HintPath>Dependencies\Sitecore.ExperienceEditor.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ExperienceEditor.Speak, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Sitecore.ExperienceEditor.Speak.dll</HintPath>
+      <HintPath>Dependencies\Sitecore.ExperienceEditor.Speak.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Kernel">
       <HintPath>bin\Sitecore.Kernel.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Mvc">
-      <HintPath>bin\Sitecore.Mvc.dll</HintPath>
+      <HintPath>Dependencies\Sitecore.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Speak.Client">
-      <HintPath>bin\Sitecore.Speak.Client.dll</HintPath>
+      <HintPath>Dependencies\Sitecore.Speak.Client.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Web">
-      <HintPath>bin\Sitecore.Web.dll</HintPath>
+      <HintPath>Dependencies\Sitecore.Web.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

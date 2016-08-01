@@ -6,14 +6,11 @@ using Sitecore.Web;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TheReference.DotNet.Sitecore.EasyLingo
 {
     public static class LanguageContainer
     {
-
         public static IEnumerable<LanguageVersion> GetAllowedLanguageVersions(Item sitecoreItem)
         {
             var languageList = new List<LanguageVersion>();
@@ -71,7 +68,7 @@ namespace TheReference.DotNet.Sitecore.EasyLingo
         {
             var languageItem = language.Origin != null && !ID.IsNullOrEmpty(language.Origin.ItemId) ? currentItem.Database.GetItem(language.Origin.ItemId) : null;
             var languageName = languageItem != null ? languageItem.Name : language.Name;
-            var iconUrl = LanguageContainer.GetIconUrl(languageItem);
+            var iconUrl = GetIconUrl(languageItem);
 
             return new LanguageVersion
             {
@@ -96,7 +93,7 @@ namespace TheReference.DotNet.Sitecore.EasyLingo
                 }
             }
 
-            result = result.Any() ? result : LanguageManager.GetLanguages(currentItem.Database).Select(l => l.Name).ToList<string>();
+            result = result.Any() ? result : LanguageManager.GetLanguages(currentItem.Database).Select(l => l.Name).ToList();
             return result.Distinct(StringComparer.OrdinalIgnoreCase);
         }
 
@@ -105,13 +102,9 @@ namespace TheReference.DotNet.Sitecore.EasyLingo
             return global::Sitecore.Configuration.Factory.GetSiteInfoList().Where(s => !string.IsNullOrEmpty(s.RootPath) && item.Paths.FullPath.StartsWith(s.RootPath));
         }
 
-        public static string GetIconUrl(Item languageItem)
+        private static string GetIconUrl(Item languageItem)
         {
-            if(languageItem == null)
-            {
-                return "/temp/IconCache/Office/16x16/flag_generic.png";
-            }
-            string DefaultLanguageIconPath = "Network/16x16/earth.png";
+            const string DefaultLanguageIconPath = "Network/16x16/earth.png";
             var iconPath = languageItem != null ? languageItem.Appearance.Icon : DefaultLanguageIconPath;
             iconPath = iconPath.Replace("24x24", "16x16").Replace("32x32", "16x16").Replace("48x48", "16x16");
             return $"/temp/IconCache/{iconPath}";
