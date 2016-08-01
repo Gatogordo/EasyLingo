@@ -4,8 +4,8 @@
     {
         Exists,
         IsFallback,
-        Extra,
-        None
+        None,
+        Extra
     }
 
     public class LanguageVersion
