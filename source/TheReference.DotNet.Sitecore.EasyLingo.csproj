@@ -89,6 +89,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="SitecorePackage\EasyLingo.xml" />
     <Content Include="sitecore\shell\client\Sitecore\ExperienceEditor\Commands\ShowLanguageBar.js" />
     <Content Include="sitecore\shell\client\Sitecore\Speak\Ribbon\Assets\Styles\Generated\LanguageBar.css" />
     <Content Include="sitecore\shell\client\Sitecore\Speak\Ribbon\Controls\LanguageBar\LanguageBar.js" />
