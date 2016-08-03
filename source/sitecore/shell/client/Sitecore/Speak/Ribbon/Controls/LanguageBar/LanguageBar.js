@@ -17,7 +17,7 @@ function (Sitecore, RibbonPageCode, ExperienceEditor) {
         initialize: function () {
             document.languageBarContext = this;
             //ExperienceEditor.getPageEditingWindow().document.languageBarContext = this;
-            window.parent.document.breadcrumbContext = this;
+            window.parent.document.languageBarContext = this;
             var mode = ExperienceEditor.Web.getUrlQueryStringValue("mode");
             this.model.on("change:isVisible", this.renderLanguageBar, this);
             ExperienceEditor.Common.registerDocumentStyles(["/-/speak/v1/ribbon/LanguageBar.css"], window.parent.document);
