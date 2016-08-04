@@ -98,7 +98,7 @@ function (Sitecore, RibbonPageCode, ExperienceEditor) {
             var context = ExperienceEditor.generateDefaultContext();
             context.currentContext.itemId = itemId;
             ExperienceEditor.PipelinesUtil.generateRequestProcessor("EasyLingo.LanguageBar.GetLanguageVersions", function (response) {
-                appContext.allowedLanguageVersions = response.responseValue.value;
+                appContext.languageVersions = response.responseValue.value;
             }).execute(context);
         },
 
