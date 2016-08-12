@@ -3,7 +3,7 @@
     <metadata>
       <PackageName>EasyLingo</PackageName>
       <Author>Gert Gullentops - Kris Verheire</Author>
-      <Version>2.0</Version>
+      <Version>2.1</Version>
       <Revision />
       <License />
       <Comment />
@@ -17,14 +17,6 @@
   <SaveProject>True</SaveProject>
   <Sources>
     <xfiles>
-      <Entries>
-        <x-item>/App_Config/Include/zEasyLingo/EasyLingo.config</x-item>
-        <x-item>/bin/TheReference.DotNet.Sitecore.EasyLingo.dll</x-item>
-        <x-item>/sitecore/shell/client/Sitecore/ExperienceEditor/Commands/ShowLanguageBar.js</x-item>
-        <x-item>/sitecore/shell/client/Sitecore/Speak/Ribbon/Assets/Styles/Generated/LanguageBar.css</x-item>
-        <x-item>/sitecore/shell/client/Sitecore/Speak/Ribbon/Controls/LanguageBar/LanguageBar.cshtml</x-item>
-        <x-item>/sitecore/shell/client/Sitecore/Speak/Ribbon/Controls/LanguageBar/LanguageBar.js</x-item>
-      </Entries>
       <Converter>
         <FileToEntryConverter>
           <Root>/</Root>
@@ -40,6 +32,14 @@
           </Transforms>
         </FileToEntryConverter>
       </Converter>
+      <Entries>
+        <x-item>/App_Config/Include/zEasyLingo/EasyLingo.config</x-item>
+        <x-item>/bin/TheReference.DotNet.Sitecore.EasyLingo.dll</x-item>
+        <x-item>/sitecore/shell/client/Sitecore/ExperienceEditor/Commands/ShowLanguageBar.js</x-item>
+        <x-item>/sitecore/shell/client/Sitecore/Speak/Ribbon/Assets/Styles/Generated/LanguageBar.css</x-item>
+        <x-item>/sitecore/shell/client/Sitecore/Speak/Ribbon/Controls/LanguageBar/LanguageBar.cshtml</x-item>
+        <x-item>/sitecore/shell/client/Sitecore/Speak/Ribbon/Controls/LanguageBar/LanguageBar.js</x-item>
+      </Entries>
       <Include />
       <Exclude />
       <Name>Sitecore file entries</Name>

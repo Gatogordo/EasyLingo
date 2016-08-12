@@ -1,53 +1,78 @@
-.sc-languagebar
-{
-  background: #e6e6e6;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f7f7f7), color-stop(1, #ebebeb));
-  background: -ms-linear-gradient(bottom, #f7f7f7, #ebebeb);
-  background: -moz-linear-gradient(center bottom, #f7f7f7 0%, #ebebeb 100%);
-  background: -o-linear-gradient(#ebebeb, #f7f7f7);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebebeb', endColorstr='#f7f7f7', GradientType=0);
-  padding: 0.25em 1em;
+.sc-languagebar{
+	background: #e6e6e6;
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f7f7f7), color-stop(1, #ebebeb));
+	background: -ms-linear-gradient(bottom, #f7f7f7, #ebebeb);
+	background: -moz-linear-gradient(center bottom, #f7f7f7 0%, #ebebeb 100%);
+	background: -o-linear-gradient(#ebebeb, #f7f7f7);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebebeb', endColorstr='#f7f7f7', GradientType=0);
+	padding: 0 1em;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-flex-direction: row;
+	-moz-box-flex-direction: row;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
 }
 
 #languagebarMenuSubcontrol_context_menu nav.sc-languagebar{
-  height: auto;
+	height: auto;
 }
 
-.sc-languagebar .sc-languagebar-item
-{
-	//float: left;
+.sc-languagebar .sc-languagebar-item{
 	display: inline-block;
 	padding: .2em .5em .5em 0;
 	text-decoration: none;
-    color: black
+    color: black;
+    white-space: nowrap;
 }
   
-.sc-languagebar .sc-languagebar-title
-{
-	//float: left;
-	display: inline-block;
+.sc-languagebar .sc-languagebar-title{
 	padding: .2em .5em .5em 0;
-	text-decoration: none;
+    text-decoration: none;
+    -webkit-box-flex: 1 1 auto;
+	-moz-box-flex:  1 1 auto;
+	-webkit-flex:  1 1 auto;
+	-ms-flex:  1 1 auto;
+	flex:  1 1 auto;
+	white-space: nowrap;
 }
 
 .sc-languagebar-section {
-	display: inline-block;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	padding: .5em 0;
+}
+.sc-languagebar-section + .sc-languagebar-section{
+	padding-left: 10px;
+	border-left: 1px solid rgba(0,0,0,.05);
 }
 
-.sc-languagebar  .sc-languagebar-items {
-	max-width: 300px;
-	margin-right: 20px;
-	overflow: hidden;
-	display: inline-block;
-	vertical-align: bottom;
-	}
+.sc-languagebar .sc-languagebar-items {
+    -webkit-box-flex: 1 1 auto;
+	-moz-box-flex:  1 1 auto;
+	-webkit-flex:  1 1 auto;
+	-ms-flex:  1 1 auto;
+	flex:  1 1 auto;
+	min-width: 125px;
+}
 	
 .sc-languagebar .italic {
     font-style: italic
 }
 
 .sc-languagebar .margin {
-    overflow: hidden;
-    display: inline-block;
-    vertical-align: bottom;
+	-webkit-box-flex: 1 0 auto;
+	-moz-box-flex:  1 0 auto;
+	-webkit-flex:  1 0 auto;
+	-ms-flex:  1 0 auto;
+	flex:  1 0 auto;
+	border-left: 1px dashed rgba(0,0,0,.1);
+    min-width: 10px;
 }
