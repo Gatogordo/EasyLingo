@@ -27,7 +27,7 @@ namespace TheReference.DotNet.Sitecore.EasyLingo
                                              CreateLanguageVersion(sitecoreItem, language, translatedItem.IsFallback ? VersionStatus.IsFallback : VersionStatus.Exists) :
                                              CreateLanguageVersion(sitecoreItem, language, VersionStatus.Extra));
                     }
-                    else
+                    else if (allowedLanguages.Contains(language.Name, StringComparer.OrdinalIgnoreCase))
                     {
                         languageList.Add(CreateLanguageVersion(sitecoreItem, language, VersionStatus.None));
                     }
@@ -70,7 +70,7 @@ namespace TheReference.DotNet.Sitecore.EasyLingo
 
         private static IEnumerable<SiteInfo> GetSites(Item item)
         {
-            return Factory.GetSiteInfoList().Where(s => !string.IsNullOrEmpty(s.RootPath) && item.Paths.FullPath.StartsWith(s.RootPath));
+            return Factory.GetSiteInfoList().Where(s => !string.IsNullOrEmpty(s.RootPath) && item.Paths.FullPath.StartsWith((s.RootPath + s.StartItem).Replace("//", "/"), StringComparison.OrdinalIgnoreCase));
         }
 
         private static string GetIconUrl(Item languageItem)
