@@ -40,27 +40,33 @@
     <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Sitecore.Client">
-      <HintPath>bin\Sitecore.Client.dll</HintPath>
+    <Reference Include="Sitecore.Client, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Sitecore.Client.NoReferences.8.1.151207\lib\NET45\Sitecore.Client.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.ExperienceEditor">
-      <HintPath>Dependencies\Sitecore.ExperienceEditor.dll</HintPath>
+    <Reference Include="Sitecore.ExperienceEditor, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Sitecore.ExperienceEditor.NoReferences.8.1.151207\lib\NET45\Sitecore.ExperienceEditor.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.ExperienceEditor.Speak, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Dependencies\Sitecore.ExperienceEditor.Speak.dll</HintPath>
+    <Reference Include="Sitecore.ExperienceEditor.Speak, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Sitecore.ExperienceEditor.Speak.NoReferences.8.1.151207\lib\NET45\Sitecore.ExperienceEditor.Speak.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Kernel">
-      <HintPath>bin\Sitecore.Kernel.dll</HintPath>
+    <Reference Include="Sitecore.Kernel, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Sitecore.Kernel.NoReferences.8.1.151207\lib\NET45\Sitecore.Kernel.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Mvc">
-      <HintPath>Dependencies\Sitecore.Mvc.dll</HintPath>
+    <Reference Include="Sitecore.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Sitecore.Mvc.NoReferences.8.1.151207\lib\NET45\Sitecore.Mvc.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Speak.Client">
-      <HintPath>Dependencies\Sitecore.Speak.Client.dll</HintPath>
+    <Reference Include="Sitecore.Speak.Client, Version=2.0.811.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Sitecore.Speak.Client.NoReferences.8.1.151207\lib\NET45\Sitecore.Speak.Client.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Web">
-      <HintPath>Dependencies\Sitecore.Web.dll</HintPath>
+    <Reference Include="Sitecore.Web, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Sitecore.Web.NoReferences.8.1.151207\lib\NET45\Sitecore.Web.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -81,6 +87,7 @@
     <None Include="App_Config\Include\zEasyLingo\EasyLingo.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
     <None Include="sitecore\shell\client\Sitecore\Speak\Ribbon\Controls\LanguageBar\LanguageBar.cshtml" />
   </ItemGroup>
   <ItemGroup>

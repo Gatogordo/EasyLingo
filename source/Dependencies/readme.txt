@@ -1,1 +1,0 @@
-Copy the necessary assemblies from Sitecore XP 8.1 here.
