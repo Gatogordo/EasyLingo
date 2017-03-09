@@ -1,3 +1,5 @@
 source/bin/
 source/obj/
 source/.vs/
+*.Cache
+source/packages/
