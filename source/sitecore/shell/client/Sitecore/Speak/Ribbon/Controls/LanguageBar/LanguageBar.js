@@ -121,13 +121,11 @@ function (Sitecore, RibbonPageCode, ExperienceEditor) {
         //Language change call
         changeLanguage: function (language) {
             var context = ExperienceEditor.generateDefaultContext();
+            context.currentContext.value = encodeURIComponent(language) + "|" + ExperienceEditor.getContext().instance.currentContext.ribbonUrl;
 
-            context.currentContext.value = encodeURIComponent(language);
-            context.currentContext.queryString = ExperienceEditor.getPageEditingWindow().location.origin + ExperienceEditor.RibbonApp.getAppContext().currentContext.ribbonUrl;
             ExperienceEditor.PipelinesUtil.generateRequestProcessor("ExperienceEditor.Language.ChangeLanguage", function (response) {
                 var newLanguageUrl = ExperienceEditor.Web.removeQueryStringParameter(response.responseValue.value, "sc_version");
-                //window.parent.document.location = newLanguageUrl;
-                ExperienceEditor.getPageEditingWindow().location = newLanguageUrl;
+                window.parent.document.location = newLanguageUrl;
             }).execute(context);
         },
     });
