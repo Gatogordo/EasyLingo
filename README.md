@@ -21,7 +21,7 @@ context/site.
 
 ## Sitecore
 
-The module is tested with Sitecore 8.1. It will probably work in other versions...
+The module (version) is tested with Sitecore 9.0.1. 
 
 ## What
 
