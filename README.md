@@ -28,18 +28,18 @@ The module (version) is tested with Sitecore 9.0.1.
 This module consists of 2 parts, which can be activated separately. 
 
 ### Extra languages section in the content editor
-![](https://github.com/Gatogordo/EasyLingo/blob/Experience-Editor/images/easylingo-ce-1.jpg?raw=true)
+![](https://raw.githubusercontent.com/Gatogordo/EasyLingo/master/images/easylingo-ce-1.jpg)
 
-![](https://github.com/Gatogordo/EasyLingo/blob/Experience-Editor/images/easylingo-ce-2.jpg?raw=true)
+![](https://raw.githubusercontent.com/Gatogordo/EasyLingo/master/images/easylingo-ce-2.jpg)
 
 ### Extra language bar in the Experience editor
 The bar can be toggled on or off:
 
-![](https://github.com/Gatogordo/EasyLingo/blob/Experience-Editor/images/easylingo-ee-1.png?raw=true)
+![](https://raw.githubusercontent.com/Gatogordo/EasyLingo/master/images/easylingo-ee-1.png)
 
 Once the bar is toggled on:
 
-![](https://github.com/Gatogordo/EasyLingo/blob/Experience-Editor/images/easylingo-ee-2.png?raw=true)
+![](https://raw.githubusercontent.com/Gatogordo/EasyLingo/master/images/easylingo-ee-1.png)
 
 ###Section meaning
 
