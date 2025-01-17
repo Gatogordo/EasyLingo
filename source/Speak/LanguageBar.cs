@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web.UI;
 using Sitecore.Diagnostics;
-using Sitecore.ExperienceEditor.Speak.Caches;
 using Sitecore.ExperienceEditor.Speak.Ribbon;
 using Sitecore.Globalization;
 using Sitecore.Mvc.Presentation;
@@ -30,8 +29,8 @@ namespace TheReference.DotNet.Sitecore.EasyLingo.Speak
         {
             Class = "sc-languagebar";
             DataBind = "visible: isVisible";
-            ResourcesCache.RequireJs(this, "ribbon", "LanguageBar.js");
-            ResourcesCache.RequireCss(this, "ribbon", "LanguageBar.css");
+            Requires.Script("easylingo", "LanguageBar.js");
+            Requires.Css("easylingo", "LanguageBar.css");
             HasNestedComponents = true;
             Controls = new List<ComponentBase>();
         }

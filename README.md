@@ -21,7 +21,8 @@ context/site.
 
 ## Sitecore
 
-The module (version) is tested with Sitecore 9.0.1. 
+Version 2.x is tested with Sitecore 9.x
+Version 3.0 is tested with Sitecore 10.0.4. 
 
 ## What
 
@@ -141,5 +142,5 @@ No files should be overwritten during the installation process.
 ### Future features
 
 There are no specific future features on our tasklist anymore.
-If you have specific functional requirements that you would like to see realized through this module, drop us a line or contact us on Twitter, Community, Slack and we will be glad to listen in on your thoughts and observations!
+If you have specific functional requirements that you would like to see realized through this module, drop us a line or contact us on X, Bluesky, Slack and we will be glad to listen in on your thoughts and observations!
 

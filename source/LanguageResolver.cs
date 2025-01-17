@@ -47,7 +47,7 @@ namespace TheReference.DotNet.Sitecore.EasyLingo
 
             if (!configuredAllowedLanguages.Contains(Context.Language.Name))
             {
-                args.Context.Response.RedirectPermanent("/" + configuredAllowedLanguages.First().ToLowerInvariant());
+                args.HttpContext.Response.RedirectPermanent("/" + configuredAllowedLanguages.First().ToLowerInvariant());
             }
         }
 

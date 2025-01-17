@@ -3,3 +3,4 @@ source/obj/
 source/.vs/
 *.Cache
 source/packages/
+.vs/*
