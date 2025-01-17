@@ -22,7 +22,8 @@ context/site.
 ## Sitecore
 
 Version 2.x is tested with Sitecore 9.x
-Version 3.0 is tested with Sitecore 10.0.4. 
+Version 3.0 is tested with Sitecore 10.0.4
+Version 3.0.1 was created because aparently 3.0 breaks the Experience Editor...   so that part is removed in this version until it gets fixed (no promise on delivery)
 
 ## What
 

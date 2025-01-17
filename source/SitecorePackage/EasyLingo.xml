@@ -3,7 +3,7 @@
     <metadata>
       <PackageName>EasyLingo</PackageName>
       <Author>Gert Gullentops - Kris Verheire - Tutku Can</Author>
-      <Version>2.2</Version>
+      <Version>3.0.1</Version>
       <Revision />
       <License />
       <Comment />
@@ -35,40 +35,11 @@
       <Entries>
         <x-item>/App_Config/Include/zEasyLingo/EasyLingo.config</x-item>
         <x-item>/bin/TheReference.DotNet.Sitecore.EasyLingo.dll</x-item>
-        <x-item>/sitecore/shell/client/Sitecore/ExperienceEditor/Commands/ShowLanguageBar.js</x-item>
-        <x-item>/sitecore/shell/client/Sitecore/Speak/Ribbon/Assets/Styles/Generated/LanguageBar.css</x-item>
-        <x-item>/sitecore/shell/client/Sitecore/Speak/Ribbon/Controls/LanguageBar/LanguageBar.cshtml</x-item>
-        <x-item>/sitecore/shell/client/Sitecore/Speak/Ribbon/Controls/LanguageBar/LanguageBar.js</x-item>
       </Entries>
       <Include />
       <Exclude />
       <Name>Sitecore file entries</Name>
     </xfiles>
-    <xitems>
-      <Entries>
-        <x-item>/core/sitecore/client/Applications/ExperienceEditor/Common/Layouts/Renderings/Ribbon/LanguageBar/{12159012-12AC-440D-855F-2B3400EA1C79}/invariant/0</x-item>
-        <x-item>/core/sitecore/client/Applications/ExperienceEditor/Ribbon/{211C29FA-E34A-48CD-BD0E-6CA07E27C45A}/invariant/0</x-item>
-        <x-item>/core/sitecore/content/Applications/WebEdit/Ribbons/WebEdit/View/Show/Show Language bar/{9DD97210-E206-4976-84E2-068ADA070ADC}/invariant/0</x-item>
-      </Entries>
-      <SkipVersions>False</SkipVersions>
-      <Converter>
-        <ItemToEntryConverter>
-          <Transforms>
-            <InstallerConfigurationTransform>
-              <Options>
-                <BehaviourOptions>
-                  <ItemMode>Undefined</ItemMode>
-                  <ItemMergeMode>Undefined</ItemMergeMode>
-                </BehaviourOptions>
-              </Options>
-            </InstallerConfigurationTransform>
-          </Transforms>
-        </ItemToEntryConverter>
-      </Converter>
-      <Include />
-      <Exclude />
-      <Name>Core ribbon items</Name>
-    </xitems>
   </Sources>
   <Converter>
     <TrivialConverter>
